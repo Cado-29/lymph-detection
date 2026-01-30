@@ -6,8 +6,9 @@ import io
 from fastapi import FastAPI, File, UploadFile, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
+import os
 
-MODEL_PATH = "model.pth"
+MODEL_PATH = os.path.join("..", "model", "EfficientNetV2_S.pth")
 
 CLASS_NAMES = ['Fake', 'Real'] 
 
