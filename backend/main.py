@@ -8,7 +8,15 @@ from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
 import os
 
-MODEL_PATH = os.path.join("..", "model", "EfficientNetV2_S.pth")
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+MODEL_PATH = os.path.join(
+    BASE_DIR,
+    "..", "..", "..", "..",
+    "model",
+    "EfficientNetV2_S.pth"
+)
+
 
 CLASS_NAMES = ['Fake', 'Real'] 
 
